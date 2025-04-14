@@ -25,6 +25,11 @@ export class AppComponent implements OnInit {
     this.utilityService.setMode(val);
     this.darkMode.next(val);
   }
+  
+  toggleDarkMode() {
+    const current = this.darkMode.getValue();
+    this.setMode(!current);
+  }
 
   ngOnInit() {
     this.darkMode.next(this.utilityService.isDarkMode());

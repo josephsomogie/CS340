@@ -5,19 +5,22 @@
     class="bg-gray-100 pt-4 text-black dark:bg-gray-900 dark:text-white flex flex-row justify-center align-center"
   >
     <!-- Navigation -->
-    <nav class="flex gap-3 align-center justify-center">
-      <button routerLink="/">Home</button>
-      <button routerLink="/admin">Admin</button>
-      <button routerLink="/data-download">Data Download</button>
-      <button routerLink="/electrical-home">Electrical Lab</button>
-      <button routerLink="/logs">Logs</button>
-      <button routerLink="/user-management">User Management</button>
-      <button (click)="logout()">logout</button>
-      <button (click)="setMode(false)">Light Mode☀️</button>
-      <button (click)="setMode(true)">Dark Mode🌑</button>
+    <nav class="flex gap-3 align-center justify-center text-center bg-gray-200 dark:bg-gray-700  p-2 rounded">
+      <button class="nav-button" routerLink="/">Home</button>
+      <button class="nav-button" routerLink="/admin">Admin</button>
+      <button class="nav-button" routerLink="/data-download">Data Download</button>
+      <button class="nav-button" routerLink="/electrical-home">Electrical Lab</button>
+      <button class="nav-button" routerLink="/logs">Logs</button>
+      <button class="nav-button" routerLink="/user-management">User Management</button>
+      <button class="nav-button" (click)="logout()">Logout</button>
+      <button 
+      class="nav-button"
+      (click)="toggleDarkMode()">
+        {{ (darkMode | async) ? 'Light Mode' : 'Dark Mode' }}
+      </button>
     </nav>
   </div>
 
   <!-- This will load the current page (Home, Admin, or Authentication) -->
   <router-outlet class="w-full"></router-outlet>
-</div>
+</div> 

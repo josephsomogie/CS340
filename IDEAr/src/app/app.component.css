@@ -13,3 +13,20 @@
   flex-grow: 1;
   padding: 10px;
 }
+
+
+.nav-button {
+  padding-left: 0.25rem;  /* px-1 */
+  padding-right: 0.25rem;
+  margin-left: 0.25rem;   /* mx-1 */
+  margin-right: 0.25rem;
+  display: flex;          /* flex */
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem; /* rounded */
+  transition: text-decoration 0.2s;
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+}
